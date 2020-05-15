@@ -3,7 +3,7 @@ This script will extract wanted data from given html
 """
 from bs4 import BeautifulSoup
 import logger_factory,logging
-logging.getLogger(__name__)
+logging.getLogger(__file__)
 
 class extracter_from_w3():
 

@@ -25,3 +25,15 @@ class TestCode(unittest.TestCase):
         test_3 = requester.requester('https://www.w3schools.com/python/python_ref_functions.asp').extract_html()
         extracter_3 = extracter.extracter_from_w3(test_3['content'])
         self.assertNotEqual(extracter_3.extract_data(), False)
+
+
+    def test_saver(self):
+        test_1 = requester.requester('https://www.w3schools.com/python/python_ref_list.asp').extract_html()
+        extracter_1 = extracter.extracter_from_w3(test_1['content']).extract_data()
+        self.assertEqual(saver.saver('list_functions').save_data_into_file(extracter_1), True)
+        test_2 = requester.requester('https://www.w3schools.com/python/python_ref_dictionary.asp').extract_html()
+        extracter_2 = extracter.extracter_from_w3(test_2['content']).extract_data()
+        self.assertEqual(saver.saver('dict_functions').save_data_into_file(extracter_2), True)
+        test_3 = requester.requester('https://www.w3schools.com/python/python_ref_functions.asp').extract_html()
+        extracter_3 = extracter.extracter_from_w3(test_3['content']).extract_data()
+        self.assertEqual(saver.saver('built_in_functions').save_data_into_file(extracter_3), True)

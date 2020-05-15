@@ -3,7 +3,8 @@ This script will request and get html from given url
 """
 
 import requests
-import logging,logger_factory
+import logger_factory,logging
+logging.getLogger(__file__)
 
 class requester():
     def __init__(self,url,attempts = 3):
