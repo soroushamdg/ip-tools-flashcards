@@ -15,7 +15,7 @@ class extracter_from_w3():
         :param firstXitems: output first X items of whole items on the page
         """
 
-        self.bs = BeautifulSoup(html_content)
+        self.bs = BeautifulSoup(html_content,features="html.parser")
         self.index = index
         self.range = firstXitems * 2 if firstXitems else None
         logging.debug("new extracter_from_w3 object created!")
@@ -36,7 +36,7 @@ class extracter_from_w3():
     def extract_data_from_rows(self,rows):
         if rows:
             logging.debug("starting getting functions")
-            functions = [item.find('a').text for item in rows[:self.range:2]]
+            functions = [item.find('a').text for item in rows[:self.range:2] if item.find('a')]
             logging.debug("starting getting descriptions")
             descriptions = [item.text for item in rows[1:self.range+1:2]] if self.range else  [item.text for item in rows[1:self.range:2]]
             try:
