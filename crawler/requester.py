@@ -3,9 +3,9 @@ This script will request and get html from given url
 """
 
 import requests
-import logging,logging_factory
+import logging,logger_factory
 
-class extracter():
+class requester():
     def __init__(self,url,attempts = 3):
         self.url = url
         self.attempts = attempts

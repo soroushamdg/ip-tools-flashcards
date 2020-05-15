@@ -1,5 +1,5 @@
 import unittest
-from crawler import extractor, requester, saver
+from crawler import extracter, requester, saver
 
 class TestCode(unittest.TestCase):
     def test_request(self):
@@ -15,13 +15,13 @@ class TestCode(unittest.TestCase):
     def test_extracter(self):
 
         test_1 = requester.requester('https://www.w3schools.com/python/python_ref_list.asp').extract_html()
-        extracter_1 = extractor.extracter_from_w3(test_1['content'])
+        extracter_1 = extracter.extracter_from_w3(test_1['content'])
         self.assertNotEqual(extracter_1.extract_data(),False)
 
         test_2 = requester.requester('https://www.w3schools.com/python/python_ref_dictionary.asp').extract_html()
-        extracter_2 = extractor.extracter_from_w3(test_2['content'])
+        extracter_2 = extracter.extracter_from_w3(test_2['content'])
         self.assertNotEqual(extracter_2.extract_data(), False)
 
         test_3 = requester.requester('https://www.w3schools.com/python/python_ref_functions.asp').extract_html()
-        extracter_3 = extractor.extracter_from_w3(test_3['content'])
+        extracter_3 = extracter.extracter_from_w3(test_3['content'])
         self.assertNotEqual(extracter_3.extract_data(), False)
