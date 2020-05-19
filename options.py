@@ -1,5 +1,7 @@
 import pathlib,os
 test_run = False
+
+main_path = str(pathlib.Path(pathlib.Path(__file__).parent))
 if not pathlib.Path(pathlib.Path(__file__).parent).joinpath('data').exists():
     os.mkdir(str(pathlib.Path(pathlib.Path(__file__).parent).joinpath('data')))
 
@@ -10,3 +12,5 @@ if not pathlib.Path(pathlib.Path(__file__).parent).joinpath('log').exists():
     log_path = str(pathlib.Path(pathlib.Path(__file__).parent).joinpath('log').joinpath('log.log'))
 else:
     log_path = str(pathlib.Path(pathlib.Path(__file__).parent).joinpath('log').joinpath('log.log'))
+
+pptxs_path = str(pathlib.Path(pathlib.Path(__file__).parent).joinpath('pptxs'))

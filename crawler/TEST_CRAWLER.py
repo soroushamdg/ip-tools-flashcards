@@ -35,5 +35,5 @@ class TestCode(unittest.TestCase):
         extracter_2 = extracter.extracter_from_w3(test_2['content']).extract_data()
         self.assertEqual(saver.saver('dict_functions').save_data_into_file(extracter_2), True)
         test_3 = requester.requester('https://www.w3schools.com/python/python_ref_functions.asp').extract_html()
-        extracter_3 = extracter.extracter_from_w3(test_3['content']).extract_data()
-        self.assertEqual(saver.saver('built_in_functions').save_data_into_file(extracter_3), True)
+        extracter_3 = extracter.extracter_from_w3(test_3['content'],index=False).extract_data()
+        self.assertEqual(saver.saver('built_in_functions',index=False).save_data_into_file(extracter_3), True)
