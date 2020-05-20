@@ -22,6 +22,7 @@ class seeker():
             for file in files_to_ret:
                 with open(str(pathlib.Path(data_path).joinpath(file))) as csvfile:
                     csvfile = csv.reader(csvfile)
+                    next(csvfile)
                     logging.debug(f'exporting {filename}.')
                     ret_dict[file] = [func for func in csvfile if func]
         except Exception as msg:
