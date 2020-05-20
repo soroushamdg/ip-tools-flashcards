@@ -20,6 +20,12 @@ class extracter_from_w3():
         self.range = firstXitems * 2 if firstXitems else None
         logging.debug("new extracter_from_w3 object created!")
 
+    def clean_description(self,text):
+        text = text.replace('\n','')
+        text = text.replace('\r', '')
+        text = text.replace(',', '')
+        return text
+
     def extract_rows(self):
         logging.debug("finding table")
         try:
@@ -36,9 +42,9 @@ class extracter_from_w3():
     def extract_data_from_rows(self,rows):
         if rows:
             logging.debug("starting getting functions")
-            functions = [item.find('a').text for item in rows[:self.range:2] if item.find('a')]
+            functions = [item.find('a').text if item.find('a') else item.text for item in rows[:self.range:2] if item]
             logging.debug("starting getting descriptions")
-            descriptions = [item.text for item in rows[1:self.range+1:2]] if self.range else  [item.text for item in rows[1:self.range:2]]
+            descriptions = [self.clean_description(item.text) for item in rows[1:self.range+1:2]] if self.range else [self.clean_description(item.text) for item in rows[1:self.range:2]]
             try:
                 return list(zip(list(range(len(functions))),functions,descriptions)) if self.index else list(zip(functions,descriptions))
             except Exception as msg:
