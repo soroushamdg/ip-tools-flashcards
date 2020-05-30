@@ -18,7 +18,7 @@ class saver():
             with open(pathlib.Path(options.data_path).joinpath(self.filename+'.csv'),'w') as csv_file:
                 logging.debug(f'{self.filename} opened.')
                 writer = csv.writer(csv_file)
-                row = ['index','function','description'] if self.index else ['function','description']
+                row = ['index','function','description','example','exp output'] if self.index else ['function','description','example','exp output']
                 writer.writerow(row)
                 csv_file.close()
         except Exception as msg:

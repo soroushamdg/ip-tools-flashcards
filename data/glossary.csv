@@ -1,0 +1,173 @@
+index,function,description,example,exp output
+0,Indentation,Indentation refers to the spaces at the beginning of a code line
+1,Comments,Comments are code lines that will not be executed
+2,Multi Line Comments,How to insert comments on multiple lines
+3,Creating Variables,Variables are containers for storing data values
+4,Variable Names,How to name your variables
+5,Assign Values to Multiple Variables,How to assign values to multiple variables
+6,Output Variables,Use the print statement to output variables
+7,String Concatenation,How to combine strings
+8,Global Variables,Global variables are variables that belongs to the global scope
+9,Built-In Data Types,Python has a set of built-in data types
+10,Getting Data Type,How to get the data type of an object
+11,Setting Data Type,How to set the data type of an object
+12,Numbers,There are three numeric types in Python
+13,Int,The integer number type
+14,Float,The floating number type
+15,Complex,The complex number type
+16,Type Conversion,How to convert from one number type to another
+17,Random Number,How to create a random number
+18,Specify a Variable Type,How to specify a certain data type for a variable
+19,String Literals,How to create string literals
+20,Assigning a String to a Variable,How to assign a string value to a variable
+21,Multiline Strings,How to create a multi line string
+22,Strings are Arrays,Strings in Python are arrays of bytes representing Unicode characters
+23,Slicing a String,How to slice a string
+24,Negative Indexing on a String,How to use negative indexing when accessing a string
+25,String Length,How to get the length of a string
+26,Check In String,How to check if a string contains a specified phrase
+27,Format String,How to combine two strings
+28,Escape Characters,How to use escape characters
+29,Boolean Values,True or False
+30,Evaluate Booleans,Evaluate a value or statement and return either True or False
+31,Return Boolean Value,Functions that return a Boolean value
+32,Operators,Use operator to perform operations in Python
+33,Arithmetic Operators,Arithmetic operator are used to perform common mathematical operations
+34,Assignment Operators,Assignment operators are use to assign values to variables
+35,Comparison Operators,Comparison operators are used to compare two values
+36,Logical Operators,Logical operators are used to combine conditional statements
+37,Identity Operators,Identity operators are used to see if two objects are in fact the same object
+38,Membership Operators,Membership operators are used to test is a sequence is present in an object
+39,Bitwise Operators,Bitwise operators are used to compare (binary) numbers
+40,Lists,A list is an ordered and changeable collection
+41,Access List Items,How to access items in a list
+42,Change List Item,How to change the value of a list item
+43,Loop Through List Items,How to loop through the items in a list
+44,Check if List Item Exists,How to check if a specified item is present in a list
+45,List Length,How to determine the length of a list
+46,Add List Items,How to add items to a list
+47,Remove List Items,How to remove list items
+48,Copy a List,How to copy a list
+49,Join Two Lists,How to join two lists
+50,Tuple,A tuple is an ordered and unchangeable collection
+51,Access Tuple Items,How to access items in a tuple
+52,Change Tuple Item,How to change the value of a tuple item
+53,Loop List Items,How to loop through the items in a tuple
+54,Check if Tuple Item Exists,How to check if a specified item is present in a tuple
+55,Tuple Length,How to determine the length of a tuple
+56,Tuple With One Item,How to create a tuple with only one item
+57,Remove Tuple Items,How to remove tuple items
+58,Join Two Tuples,How to join two tuples
+59,Set,A set is an unordered and unchangeable collection
+60,Access Set Items,How to access items in a set
+61,Add Set Items,How to add items to a set
+62,Loop Set Items,DETTE KAPITTELET MANGLER
+63,Check if Set Item Exists,DETTE KAPITTELET MANGLER
+64,Set Length,How to determine the length of a set
+65,Remove Set Items,How to remove set items
+66,Join Two Sets,How to join two sets
+67,Dictionary,A dictionary is an unordered and changeable collection
+68,Access Dictionary Items,How to access items in a dictionary
+69,Change Dictionary Item,How to change the value of a dictionary item
+70,Loop Dictionary Items,How to loop through the items in a tuple
+71,Check if Dictionary Item Exists,How to check if a specified item is present in a dictionary
+72,Dictionary Length,How to determine the length of a dictionary
+73,Add Dictionary Item,How to add an item to a dictionary
+74,Remove Dictionary Items,How to remove dictionary items
+75,Copy Dictionary,How to copy a dictionary
+76,Nested Dictionaries,A dictionary within a dictionary
+77,If Statement,How to write an if statement
+78,If Indentation,If statemnts in Python relies on indentation (whitespace at the beginning of a line)
+79,Elif,"elif is the same as ""else if"" in other programming languages"
+80,Else,How to write an if...else statement
+81,Shorthand If,How to write an if statement in one line
+82,Shorthand If Else,How to write an if...else statement in one line
+83,If AND,Use the and keyword to combine if statements
+84,If OR,Use the or keyword to combine if statements
+85,Nested If,How to write an if statement inside an if statement
+86,The pass Keyword in If,Use the pass keyword inside empty if statements
+87,While,How to write a while loop
+88,While Break,How to break a while loop
+89,While Continue,How to stop the current iteration and continue wit the next
+90,While Else,How to use an else statement in a while loop
+91,For,How to write a for loop
+92,Loop Through a String,How to loop through a string
+93,For Break,How to break a for loop
+94,For Continue,How to stop the current iteration and continue wit the next
+95,Looping Through a rangee,How to loop through a range of values
+96,For Else,How to use an else statement in a for loop
+97,Nested Loops,How to write a loop inside a loop
+98,For pass,Use the pass keyword inside empty for loops
+99,Function,How to create a function in Python
+100,Call a Function,How to call a function in Python
+101,Function Arguments,How to use arguments in a function
+102,*args,To deal with an unknown number of arguments in a function use the * symbol before the parameter name
+103,Keyword Arguments,How to use keyword arguments in a function
+104,*kwargs,To deal with an unknown number of keyword arguments in a function use the * symbol before the parameter name
+105,Default Parameter Value,How to use a default parameter value
+106,Passing a List as an Argument,How to pass a list as an argument
+107,Function Return Value,How to return a value from a function
+108,The pass Statement i Functions,Use the pass statement in empty functions
+109,Function Recursion,Functions that can call itself is called recursive functions
+110,Lambda Function,How to create anonymous functions in Python
+111,Why Use Lambda Functions,Learn when to use a lambda function or not
+112,Array,Lists can be used as Arrays
+113,What is an Array,Arrays are variables that can hold more than one value
+114,Access Arrays,How to access array items
+115,Array Length,How to get the length of an array
+116,Looping Array Elements,How to loop through array elements
+117,Add Array Element,How to add elements from an array
+118,Remove Array Element,How to remove elements from an array
+119,Array Methods,Python has a set of Array/Lists methods
+120,Class,A class is like an object constructor
+121,Create Class,How to create a class
+122,The Class __init__() Function,The __init__() function is executed when the class is initiated
+123,Object Methods,Methods in objects are functions that belongs to the object
+124,self,The self parameter refers to the current instance of the class
+125,Modify Object Properties,How to modify properties of an object
+126,Delete Object Properties,How to modify properties of an object
+127,Delete Object,How to delete an object
+128,Class pass Statement,Use the pass statement in empty classes
+129,Create Parent Class,How to create a parent class
+130,Create Child Class,How to create a child class
+131,Create the __init__() Function,How to create the __init__() function
+132,super Function,The super() function make the child class inherit the parent class
+133,Add Class Properties,How to add a property to a class
+134,Add Class Methods,How to add a method to a class
+135,Iterators,An iterator is an object that contains a countable number of values
+136,Iterator vs Iterable,What is the difference between an iterator and an iterable
+137,Loop Through an Iterator,How to loop through the elements of an iterator
+138,Create an Iterator,How to create an iterator
+139,StopIteration,How to stop an iterator
+140,Global Scope,When does a variable belong to the global scope?
+141,Global Keyword,The global keyword makes the variable global
+142,Create a Module,How to create a module
+143,Variables in Modules,How to use variables in a module
+144,Renaming a Module,How to rename a module
+145,Built-in Modules,How to import built-in modules
+146,Using the dir() Function,List all variable names and function names in a module
+147,Import From Module,How to import only parts from a module
+148,Datetime Module,How to work with dates in Python
+149,Date Output,How to output a date
+150,Create a Date Object,How to create a date object
+151,The strftime Method,How to format a date object into a readable string
+152,Date Format Codes,The datetime module has a set of legal format codes
+153,JSON,How to work with JSON in Python
+154,Parse JSON,How to parse JSON code in Python
+155,Convert into JSON,How to convert a Python object in to JSON
+156,Format JSON,How to format JSON output with indentations and line breaks
+157,Sort JSON,How to sort JSON
+158,RegEx Module,How to import the regex module
+159,RegEx Functions,The re module has a set of functions
+160,Metacharacters in RegEx,Metacharacters are characters with a special meaning
+161,RegEx Special Sequences,A backslash followed by a a character has a special meaning
+162,RegEx Sets,A set is a set of characters inside a pair of square brackets with a special meaning
+163,RegEx Match Object,The Match Object is an object containing information about the search and the result
+164,Install PIP,How to install PIP
+165,PIP Packages,How to download and install a package with PIP
+166,PIP Remove Package,How to remove a package with PIP
+167,Error Handling,How to handle errors in Python
+168,Handle Many Exceptions,How to handle more than one exception
+169,Try Else,How to use the else keyword in a try statement
+170,Try Finally,How to use the finally keyword in a try statement
+171,raise,How to raise an exception in Python

@@ -12,7 +12,7 @@ class designer():
         filePath = str(pathlib.Path(options.pptxs_path).joinpath(templateFileName))
         return pptxPresent(filePath)
 
-    def fill_pptx_with_data(self,pptxObject,category,title,description):
+    def fill_pptx_with_data(self,pptxObject,category,title,description,example=None,exampleOutput=None):
         logging.debug("filling in category slide -> Start")
         try:
             pptxObject.slides[0].shapes[0].text_frame.paragraphs[0].runs[0].text = title

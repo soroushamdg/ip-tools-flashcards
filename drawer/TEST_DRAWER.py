@@ -20,15 +20,15 @@ class TestCode(unittest.TestCase):
         items3 = seeker.seeker(['list_functions']).get_and_return_data()
         self.assertNotEqual(stylist.stylist(items3).set_pptx_to_item(),None)
 
-    def test_designer(self):
-        items1 = seeker.seeker(['built_in_functions']).get_and_return_data()
-        datalist1 = stylist.stylist(items1).set_pptx_to_item()
-        self.assertEqual(designer.designer(datalist1).design_data(False), True)
-
-        items2 = seeker.seeker(['dict_functions']).get_and_return_data()
-        datalist2 = stylist.stylist(items2).set_pptx_to_item()
-        self.assertEqual(designer.designer(datalist2).design_data(), True)
-
-        items3 = seeker.seeker(['list_functions']).get_and_return_data()
-        datalist3 = stylist.stylist(items3).set_pptx_to_item()
-        self.assertEqual(designer.designer(datalist3).design_data(), True)
+    # def test_designer(self):
+    #     items1 = seeker.seeker(['built_in_functions']).get_and_return_data()
+    #     datalist1 = stylist.stylist(items1).set_pptx_to_item()
+    #     self.assertEqual(designer.designer(datalist1).design_data(False), True)
+    #
+    #     items2 = seeker.seeker(['dict_functions']).get_and_return_data()
+    #     datalist2 = stylist.stylist(items2).set_pptx_to_item()
+    #     self.assertEqual(designer.designer(datalist2).design_data(), True)
+    #
+    #     items3 = seeker.seeker(['list_functions']).get_and_return_data()
+    #     datalist3 = stylist.stylist(items3).set_pptx_to_item()
+    #     self.assertEqual(designer.designer(datalist3).design_data(), True)

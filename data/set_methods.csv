@@ -1,0 +1,18 @@
+index,function,description,example,exp output
+0,add(),Adds an element to the   set
+1,clear(),Removes all the   elements from the set
+2,copy(),Returns a copy of the set
+3,difference(),Returns a set     containing the difference between two or more sets
+4,difference_update(),Removes the     items in this set that are also included in another specified set
+5,discard(),Remove the specified   item
+6,intersection(),Returns a set     that is the intersection of two other sets
+7,intersection_update(),  Removes the items in this set that are not present in other specified set(s)
+8,isdisjoint(),Returns whether     two sets have a intersection or not
+9,issubset(),Returns whether     another set contains this set or not
+10,issuperset(),Returns whether   this set contains another set or not
+11,pop(),Removes an element from the   set
+12,remove(),Removes the specified element
+13,symmetric_difference(),Returns     a set with the symmetric differences of two sets
+14,symmetric_difference_update(),  inserts the symmetric differences from this set and another
+15,union(),Return a set containing     the union of sets
+16,update(),Update the set with the   union of this set and others

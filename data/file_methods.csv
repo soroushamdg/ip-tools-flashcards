@@ -1,0 +1,17 @@
+index,function,description,example,exp output
+0,close(),Closes the file
+1,detach(),Returns the separated     raw stream from the buffer
+2,fileno(),Returns a number that     represents the stream from the operating system's perspective
+3,flush(),Flushes the internal     buffer
+4,isatty(),Returns whether the     file stream is interactive or not
+5,read(),Returns the file content
+6,readable(),Returns whether     the file stream can be read or not
+7,readline(),Returns one line     from the file
+8,readlines(),Returns a list     of lines from the file
+9,seek(),Change the file position
+10,seekable(),Returns whether     the file allows us to change the file position
+11,tell(),Returns the current file     position
+12,truncate(),Resizes the file     to a specified size
+13,writeable(),Returns whether     the file can be written to or not
+14,write(),Writes the specified     string to the file
+15,writelines(),Writes a list     of strings to the file

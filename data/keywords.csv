@@ -1,0 +1,34 @@
+index,function,description,example,exp output
+0,and,A logical operator
+1,as,To create an alias
+2,assert,For debugging
+3,break,To break out of a loop
+4,class,To define a class
+5,continue,To continue to the     next iteration of a loop
+6,def,To define a function
+7,del,To delete an object
+8,elif,Used in conditional     statements same as else if
+9,else,Used in conditional     statements
+10,except,Used with exceptions     what to do when an exception occurs
+11,False,Boolean value result of     comparison operations
+12,finally,Used with exceptions a     block of code that will be executed no matter if there is an exception or     not
+13,for,To create a for loop
+14,from,To import specific parts of     a module
+15,global,To declare a global     variable
+16,if,To make a conditional     statement
+17,import,To import a module
+18,in,To check if a value is     present in a list tuple etc.
+19,is,To test if two variables are     equal
+20,lambda,To create an anonymous     function 
+21,None,Represents a null value
+22,nonlocal,To declare a     non-local variable
+23,not,A logical operator
+24,or,A logical operator
+25,pass,A null statement a   statement that will do nothing
+26,raise,To raise an exception
+27,return,To exit a function and   return a value
+28,True,Boolean value result of     comparison operations
+29,try,To make a try...except   statement
+30,while,To create a while loop
+31,with,Used to simplify   exception handling
+32,yield,To end a function returns   a generator

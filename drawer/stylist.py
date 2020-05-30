@@ -27,4 +27,5 @@ class stylist():
             logging.error(f"error in iterating items_list.items. -> {msg}")
             return None
         logging.debug(f'finished setting pptx templates \n{ready_dict}')
+        print(ready_dict)
         return ready_dict
