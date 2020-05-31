@@ -12,19 +12,41 @@ class designer():
         filePath = str(pathlib.Path(options.pptxs_path).joinpath(templateFileName))
         return pptxPresent(filePath)
 
-    def fill_pptx_with_data(self,pptxObject,category,title,description,example=None,exampleOutput=None):
+    def fill_pptx_with_data(self,pptxObject,category,title,description,index=None,example=None,exampleOutput=None):
+
+        logging.debug("filling in index slide -> Start")
+        try:
+            if index:
+                for field in pptxObject.slides[0].shapes:
+                    if field.text_frame.paragraphs[0].runs[0].text == '{index}':
+                        field.text_frame.paragraphs[0].runs[0].text = index
+        except Exception as msg:
+            logging.error(f"Error in filling index slide -> {msg} \n{pptxObject} -> {title} ")
+            return False
+        else:
+            logging.debug("filling in index slide -> OK")
+
+
+
         logging.debug("filling in category slide -> Start")
         try:
-            pptxObject.slides[0].shapes[0].text_frame.paragraphs[0].runs[0].text = title
+            if category:
+                for field in pptxObject.slides[0].shapes:
+                    if field.text_frame.paragraphs[0].runs[0].text == '{category}':
+                        field.text_frame.paragraphs[0].runs[0].text = category
         except Exception as msg:
             logging.error(f"Error in filling category slide -> {msg} \n{pptxObject} -> {title} ")
             return False
         else:
-            logging.debug("filling in title slide -> OK")
+            logging.debug("filling in category slide -> OK")
 
         logging.debug("filling in title slide -> Start")
+
         try:
-            pptxObject.slides[0].shapes[1].text_frame.paragraphs[0].runs[0].text = title
+            if title:
+                for field in pptxObject.slides[0].shapes:
+                    if field.text_frame.paragraphs[0].runs[0].text == '{title}':
+                        field.text_frame.paragraphs[0].runs[0].text = title
         except Exception as msg:
             logging.error(f"Error in filling title slide -> {msg} \n{pptxObject} -> {title} ")
             return False
@@ -33,12 +55,39 @@ class designer():
 
         logging.debug("filling in description slide")
         try:
-            pptxObject.slides[0].shapes[0].text_frame.paragraphs[0].runs[0].text = description
+            if description:
+                for field in pptxObject.slides[0].shapes:
+                    if field.text_frame.paragraphs[0].runs[0].text == '{description}':
+                        field.text_frame.paragraphs[0].runs[0].text = description
         except Exception as msg:
             logging.error(f"Error in filling description slide -> {msg} \n{pptxObject} -> {description} ")
             return False
         else:
             logging.debug("filling in description slide -> OK")
+
+        logging.debug("filling in example slide")
+        try:
+            if example:
+                for field in pptxObject.slides[1].shapes:
+                    if field.text_frame.paragraphs[0].runs[0].text == '{example}':
+                        field.text_frame.paragraphs[0].runs[0].text = example
+        except Exception as msg:
+            logging.error(f"Error in filling example slide -> {msg} \n{pptxObject} -> {example} ")
+            return False
+        else:
+            logging.debug("filling in example slide -> OK")
+
+        logging.debug("filling in example output slide")
+        try:
+            if exampleOutput:
+                for field in pptxObject.slides[0].shapes:
+                    if field.text_frame.paragraphs[0].runs[0].text == '{exampleOutput}':
+                        field.text_frame.paragraphs[0].runs[0].text = exampleOutput
+        except Exception as msg:
+            logging.error(f"Error in filling exampleOutput slide -> {msg} \n{pptxObject} -> {exampleOutput} ")
+            return False
+        else:
+            logging.debug("filling in exampleOutput slide -> OK")
 
         if not pathlib.Path(options.main_path).joinpath('pptx_exports').joinpath(category+'-' + title).exists():
             os.mkdir(str(pathlib.Path(options.main_path).joinpath('pptx_exports').joinpath(category+'-' + title)))
@@ -69,7 +118,7 @@ class designer():
         else:
             return True
 
-    def run_designer_for(self ,themefile, category,title ,description):
+    def run_designer_for(self ,themefile, category,title ,description,index=None,example=None,expoutput=None):
         """
         steps : 1. open template pptx
                 2. fill the pptx & save it in output folder
@@ -81,7 +130,7 @@ class designer():
         :return:
         """
         thepptx = self.open_template_pptx(themefile)
-        self.fill_pptx_with_data(thepptx,category,title,description)
+        self.fill_pptx_with_data(thepptx,category,title,description,index,example,exampleOutput=expoutput)
         self.export_pptx_into_png(category,title)
         return True
 
@@ -96,7 +145,7 @@ class designer():
                     #(['0', 'append()', 'Adds an element at   the end of the list'], 'test.pptx')
                     logging.debug(f"starting to export -> {item}")
                     if index:
-                        self.run_designer_for(item[1],key.split('.')[0],item[0][1],item[0][2])
+                        self.run_designer_for(item[1],key.split('.')[0],item[0][1],item[0][2],item[0][0],item[0][3],item[0,4])
                     else:
                         self.run_designer_for(item[1], key.split('.')[0], item[0][0], item[0][1])
                     logging.debug(f"exported -> {item}")
