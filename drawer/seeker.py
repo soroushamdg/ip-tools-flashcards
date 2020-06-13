@@ -20,7 +20,7 @@ class seeker():
         ret_dict = {}
         try:
             for file in files_to_ret:
-                with open(str(pathlib.Path(data_path).joinpath(file))) as csvfile:
+                with open(str(pathlib.Path(data_path).joinpath(file)),'r',encoding='UTF-8') as csvfile:
                     csvfile = csv.reader(csvfile)
                     next(csvfile)
                     logging.debug(f'exporting {filename}.')

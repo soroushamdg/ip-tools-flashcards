@@ -23,7 +23,7 @@ class TestCode(unittest.TestCase):
     def test_designer(self):
         items1 = seeker.seeker(['built_in_functions']).get_and_return_data()
         datalist1 = stylist.stylist(items1).set_pptx_to_item()
-        self.assertEqual(designer.designer(datalist1).design_data(False), True)
+        self.assertEqual(designer.designer(datalist1).design_data(), True)
 
         items2 = seeker.seeker(['dict_functions']).get_and_return_data()
         datalist2 = stylist.stylist(items2).set_pptx_to_item()

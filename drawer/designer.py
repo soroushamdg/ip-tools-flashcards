@@ -18,8 +18,23 @@ class designer():
         try:
             if index:
                 for field in pptxObject.slides[0].shapes:
-                    if field.text_frame.paragraphs[0].runs[0].text == '{index}':
-                        field.text_frame.paragraphs[0].runs[0].text = index
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{index}':
+                            field.text_frame.paragraphs[0].runs[0].text = f"{int(index):02d}"
+                    except:
+                        continue
+                for field in pptxObject.slides[1].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{index}':
+                            field.text_frame.paragraphs[0].runs[0].text = f"{int(index):02d}"
+                    except:
+                        continue
+                for field in pptxObject.slides[2].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{index}':
+                            field.text_frame.paragraphs[0].runs[0].text = f"{int(index):02d}"
+                    except:
+                        continue
         except Exception as msg:
             logging.error(f"Error in filling index slide -> {msg} \n{pptxObject} -> {title} ")
             return False
@@ -32,8 +47,23 @@ class designer():
         try:
             if category:
                 for field in pptxObject.slides[0].shapes:
-                    if field.text_frame.paragraphs[0].runs[0].text == '{category}':
-                        field.text_frame.paragraphs[0].runs[0].text = category
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{category}':
+                            field.text_frame.paragraphs[0].runs[0].text = category
+                    except:
+                        continue
+                for field in pptxObject.slides[1].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{category}':
+                            field.text_frame.paragraphs[0].runs[0].text = category
+                    except:
+                        continue
+                for field in pptxObject.slides[2].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{category}':
+                            field.text_frame.paragraphs[0].runs[0].text = category
+                    except:
+                        continue
         except Exception as msg:
             logging.error(f"Error in filling category slide -> {msg} \n{pptxObject} -> {title} ")
             return False
@@ -45,8 +75,23 @@ class designer():
         try:
             if title:
                 for field in pptxObject.slides[0].shapes:
-                    if field.text_frame.paragraphs[0].runs[0].text == '{title}':
-                        field.text_frame.paragraphs[0].runs[0].text = title
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{title}':
+                            field.text_frame.paragraphs[0].runs[0].text = title
+                    except:
+                        continue
+                for field in pptxObject.slides[1].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{title}':
+                            field.text_frame.paragraphs[0].runs[0].text = title
+                    except:
+                        continue
+                for field in pptxObject.slides[2].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{title}':
+                            field.text_frame.paragraphs[0].runs[0].text = title
+                    except:
+                        continue
         except Exception as msg:
             logging.error(f"Error in filling title slide -> {msg} \n{pptxObject} -> {title} ")
             return False
@@ -56,9 +101,12 @@ class designer():
         logging.debug("filling in description slide")
         try:
             if description:
-                for field in pptxObject.slides[0].shapes:
-                    if field.text_frame.paragraphs[0].runs[0].text == '{description}':
-                        field.text_frame.paragraphs[0].runs[0].text = description
+                for field in pptxObject.slides[1].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{description}':
+                            field.text_frame.paragraphs[0].runs[0].text = description
+                    except:
+                        continue
         except Exception as msg:
             logging.error(f"Error in filling description slide -> {msg} \n{pptxObject} -> {description} ")
             return False
@@ -68,9 +116,12 @@ class designer():
         logging.debug("filling in example slide")
         try:
             if example:
-                for field in pptxObject.slides[1].shapes:
-                    if field.text_frame.paragraphs[0].runs[0].text == '{example}':
-                        field.text_frame.paragraphs[0].runs[0].text = example
+                for field in pptxObject.slides[2].shapes:
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{example}':
+                            field.text_frame.paragraphs[0].runs[0].text = example
+                    except:
+                        continue
         except Exception as msg:
             logging.error(f"Error in filling example slide -> {msg} \n{pptxObject} -> {example} ")
             return False
@@ -81,8 +132,11 @@ class designer():
         try:
             if exampleOutput:
                 for field in pptxObject.slides[0].shapes:
-                    if field.text_frame.paragraphs[0].runs[0].text == '{exampleOutput}':
-                        field.text_frame.paragraphs[0].runs[0].text = exampleOutput
+                    try:
+                        if field.text_frame.paragraphs[0].runs[0].text == '{exampleOutput}':
+                            field.text_frame.paragraphs[0].runs[0].text = exampleOutput
+                    except:
+                        continue
         except Exception as msg:
             logging.error(f"Error in filling exampleOutput slide -> {msg} \n{pptxObject} -> {exampleOutput} ")
             return False
@@ -145,7 +199,15 @@ class designer():
                     #(['0', 'append()', 'Adds an element at   the end of the list'], 'test.pptx')
                     logging.debug(f"starting to export -> {item}")
                     if index:
-                        self.run_designer_for(item[1],key.split('.')[0],item[0][1],item[0][2],item[0][0],item[0][3],item[0,4])
+                        try:
+                            example = item[0][3]
+                        except:
+                            example = None
+                        try:
+                            exampleoutput = item[0][4]
+                        except:
+                            exampleoutput = None
+                        self.run_designer_for(item[1],key.split('.')[0],item[0][1],item[0][2],item[0][0],example,exampleoutput)
                     else:
                         self.run_designer_for(item[1], key.split('.')[0], item[0][0], item[0][1])
                     logging.debug(f"exported -> {item}")
